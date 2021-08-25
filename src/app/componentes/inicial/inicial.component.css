@@ -1,0 +1,11 @@
+.legend-panel {
+    display: flex;
+}
+
+.info-panel {
+    margin-top: auto;
+}
+
+.min-prod {
+    height: 350px;
+}
