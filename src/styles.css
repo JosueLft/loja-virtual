@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+.legend-panel {
+    background-color: rgba(00, 00, 00, 0.7);
+    border: 1px solid red;
+}
