@@ -4,8 +4,15 @@
 
 .info-panel {
     margin-top: auto;
+    width: 100%;
 }
 
 .min-prod {
-    height: 350px;
+    min-height: 350px;
+    max-height: 500px;
+}
+
+.product-card {
+    max-width: 350px;
+    max-height: 500px;
 }

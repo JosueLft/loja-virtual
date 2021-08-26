@@ -10,6 +10,7 @@ import { CheckoutComponent } from './componentes/checkout/checkout.component';
 
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
+import { BannerTopoComponent } from './componentes/banner-topo/banner-topo.component';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -18,7 +19,8 @@ registerLocaleData(ptBr);
     InicialComponent,
     ProdutoComponent,
     CarrinhoComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    BannerTopoComponent
   ],
   imports: [
     BrowserModule,

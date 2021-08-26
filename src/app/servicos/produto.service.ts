@@ -62,23 +62,14 @@ export class ProdutoService {
 
   private getDescricao(): string[] {
     return [
-      'Processador: Intel Core i3 10100, 3.6GHz (4.3GHz Max Turbo) 4-Core, 8-Threads, 6MB Cache, FCLGA1200',
-      '-Gráficos integrados no processador: Sim',
-      '-Intel UHD Graphics 630',
-      '-Frequência: baseada em gráficos 350 MHz',
-      '-Frequência dinâmica máxima de gráficos: 1.10 GHz',
-      '-Memória gráfica de vídeo máximo de 64GB',
-      '-Suporte 4K: 60Hz',
-      '-Resolução máxima (HDMI 1.4): 4096x2160 @ 30Hz',
-      '-Resolução máxima (DP): 4096x2304 a 60Hz',
-      'Placa mãe: Asus Prime H410M-E/BR',
-      '-Memória: 2 DIMM máximo 64GB DDR4 3200',
-      '-PCIe 3.0 x16 (modo x16): 1',
-      '-PCIe 3.0 x1: 2',
-      'Memória: 16GB (2x 8GB) DDR4 2666 Adata Chipart',
-      'HDD: 1TB, SATA3, 6.0Gb/s',
-      'Placa de video PCIe AMD Radeon RX550 4GB',
-      'Fonte de alimentação 500W Gamemax GM500, 80 Plus Bronze'
+      "Um grande fenômeno um dia aconteceu, portais desconhecidos surgiram ligando o mundo que conhecemos a uma realidade totalmente extraordinária de monstros e seres fantasiosos, cujo único objetivo era matar humanos. Em resposta a esse novo perigo, surgiram os “caçadores”, humanos que foram “despertados” e ganharam poderes capazes de bater de frente com essas criaturas. Dentre eles, há um conhecido por ser “a pior arma da humanidade”, sung jin-woo. Mas sua sorte irá mudar quando uma incursão que deveria ser fácil se torna um verdadeiro pesadelo. A versão imprensa do famoso webtoon.",
+      "Editora ‏ : ‎ NewPOP; 1ª edição(24 agosto 2020)",
+      "Idioma ‏ : ‎ Português",
+      "Capa comum ‏ : ‎ 300 páginas",
+      "ISBN - 10 ‏ : ‎ 6586799201",
+      "ISBN - 13 ‏ : ‎ 978 - 6586799200",
+      "Dimensões ‏ : ‎ 21 x 14.8 x 1.4 cm",
+      "Ranking dos mais vendidos: Nº 1, 146 em Livros"
     ];
   }
 }

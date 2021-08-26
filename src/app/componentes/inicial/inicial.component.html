@@ -1,18 +1,22 @@
-<!-- Listagem de produtos -->
-<br />
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let produto of produtos">
-        <div class="card bg-dark text-white">
-            <img src="assets/img/{{ produto.foto[0] }}" class="card-img min-prod" alt="...">
-            <div class="card-body card-img-overlay legend-panel text-center">
-                <div class="info-panel">
-                    <p class="card-title"><b><i>{{ produto.nome }}</i></b></p>
-                    <p class="card-text"><strong>{{ produto.preco | currency:"BRL" }}</strong></p>
-                    <p>
-                        <a [routerLink]="['/produto/' + produto.id ]" type="button" class="btn btn-outline-success"><i class="fas fa-plus"></i></a>
-                        &nbsp;
-                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-cart-plus"></i></button>
-                    </p>
+<banner-topo></banner-topo>
+<br>
+<div class="container">
+    <!-- Listagem de produtos -->
+    <br />
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let produto of produtos">
+            <div class="card bg-dark text-white product-card">
+                <img src="assets/img/{{ produto.foto[0] }}" class="card-img min-prod" alt="...">
+                <div class="card-body card-img-overlay legend-panel text-center">
+                    <div class="info-panel">
+                        <p class="card-title"><b><i>{{ produto.nome }}</i></b></p>
+                        <p class="card-text"><strong>{{ produto.preco | currency:"BRL" }}</strong></p>
+                        <p>
+                            <a [routerLink]="['/produto/' + produto.id ]" type="button" class="btn btn-outline-success"><i class="fas fa-plus"></i></a>
+                            &nbsp;
+                            <button type="button" class="btn btn-outline-primary" (click)="adicionarCarrinho(produto)"><i class="fas fa-cart-plus"></i></button>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
