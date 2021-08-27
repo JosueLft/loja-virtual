@@ -16,3 +16,11 @@
     max-width: 350px;
     max-height: 500px;
 }
+
+.menu-lateral {
+    border: 1px solid red;
+}
+
+.menu-itens {
+    font-size: small;
+}

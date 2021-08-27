@@ -1,0 +1,33 @@
+.img-mini-table {
+    width: 75px;
+}
+
+.lista-produto {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    color: #B36A0B;
+}
+
+.fa-trash-alt {
+    color: #b30b0b;
+}
+
+.fa-plus-square {
+    color: #157347;
+}
+
+.btn_hover:hover {
+    background-color: #157347;
+}
+
+.txt-input {
+  margin-top: 10px;
+}
+
+.btn-pagar {
+  margin-top: 10px;
+  width: 100%;
+}
