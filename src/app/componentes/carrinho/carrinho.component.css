@@ -8,5 +8,21 @@
 }
 
 td {
-    color: #b36a0b;
+    color: #B36A0B;
+}
+
+.fa-trash-alt {
+    color: #b30b0b;
+}
+
+img, h5 {
+    cursor: pointer;
+}
+
+.fa-plus-square {
+    color: #157347;
+}
+
+.btn_hover:hover {
+    background-color: #157347;
 }

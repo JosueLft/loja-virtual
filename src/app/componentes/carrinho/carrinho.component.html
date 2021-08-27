@@ -11,14 +11,21 @@
                 <table class="table table-dark table-hover table-sm table-striped lista-produto">
                     <tbody>
                         <tr *ngFor="let item of itens">
-                            <td class="img-mini-table">
+                            <td class="img-mini-table" [routerLink]="['/produto/' + item.produto.id]">
                                 <img src="assets/img/{{ item.produto.foto[0] }}" class="card-img-top" [alt]="item.produto.nome" />
                             </td>
-                            <td class="text-center">
+                            <td class="text-center" [routerLink]="['/produto/' + item.produto.id]">
                                 <h5>{{ item.produto.nome }}</h5>
                             </td>
                             <td>
                                 <strong>{{ item.quantidade }} x - {{ item.produto.preco | currency: "BRL" }}</strong>
+                                &nbsp;
+                                <button class="btn btn-sm" (click)="adicionarCarrinho(item.produto)">
+                                    <i class="fas fa-plus-square"></i>
+                                </button>
+                                <button class="btn btn-sm" (click)="removerCarrinho(item.produto.id)">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
                             </td>
                         </tr>
                     </tbody>
@@ -33,12 +40,12 @@
         </div>
         <div class="row">
             <div class="col text-center">
-                <button type="button" class="btn btn-lg btn-primary" [routerLink]="['']" (click)="finalizarCompra()">
+                <button type="button" class="btn btn-lg btn-primary" [routerLink]="['']">
                     <i class="far fa-hand-point-left"></i> Continuar Comprando
                 </button>
             </div>
             <div class="col text-center">
-                <button type="button" class="btn btn-lg btn-secondary" (click)="finalizarCompra()">
+                <button type="button" [routerLink]="['/checkout']" class="btn btn-lg btn-secondary btn_hover">
                     <i class="fas fa-cart-arrow-down"></i> Finalizar Compra
                 </button>
             </div>

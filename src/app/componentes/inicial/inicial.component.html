@@ -1,21 +1,40 @@
 <banner-topo></banner-topo>
 <br>
 <div class="container">
-    <!-- Listagem de produtos -->
     <br />
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col" *ngFor="let produto of produtos">
-            <div class="card bg-dark text-white product-card">
-                <img src="assets/img/{{ produto.foto[0] }}" class="card-img min-prod" alt="...">
-                <div class="card-body card-img-overlay legend-panel text-center">
-                    <div class="info-panel">
-                        <p class="card-title"><b><i>{{ produto.nome }}</i></b></p>
-                        <p class="card-text"><strong>{{ produto.preco | currency:"BRL" }}</strong></p>
-                        <p>
-                            <a [routerLink]="['/produto/' + produto.id ]" type="button" class="btn btn-outline-success"><i class="fas fa-plus"></i></a>
-                            &nbsp;
-                            <button type="button" class="btn btn-outline-primary" (click)="adicionarCarrinho(produto)"><i class="fas fa-cart-plus"></i></button>
-                        </p>
+    <div class="row">
+        <div class="menu-lateral col-12 col-md-3">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <h4 type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        Mangas
+                    </h4>
+                    <div *ngFor="let produto of produtos" class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link menu-itens" aria-current="page">{{ produto.nome.substr(0,15) }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Listagem de produtos -->
+        <div class="row row-cols-2 row-cols-md-3 g-3 col">
+            <div class="col" *ngFor="let produto of produtos">
+                <div class="card bg-dark text-white product-card">
+                    <img src="assets/img/{{ produto.foto[0] }}" class="card-img min-prod" alt="...">
+                    <div class="card-body card-img-overlay legend-panel text-center">
+                        <div class="info-panel">
+                            <p class="card-title"><b><i>{{ produto.nome }}</i></b></p>
+                            <p class="card-text"><strong>{{ produto.preco | currency:"BRL" }}</strong></p>
+                            <p>
+                                <a [routerLink]="['/produto/' + produto.id ]" type="button" class="btn btn-outline-success"><i class="fas fa-plus"></i></a>
+                                &nbsp;
+                                <button type="button" class="btn btn-outline-primary" (click)="adicionarCarrinho(produto)"><i class="fas fa-cart-plus"></i></button>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

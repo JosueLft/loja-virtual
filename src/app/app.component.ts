@@ -20,4 +20,8 @@ export class AppComponent implements OnInit {
     return this.carrinhoService.itens;
   }
 
+  get total() {
+    return this.carrinhoService.total;
+  }
+
 }
